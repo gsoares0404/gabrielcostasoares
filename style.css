@@ -1,0 +1,347 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+/*-------Homepage---------*/
+.header{
+	
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding-top: 150px;
+
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+.title h1{
+	font-size: 70px;
+	font-weight: 40;
+}	
+
+
+letter2{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #33adff;
+	font-size: 85px;
+}
+
+h2{
+	font-size: 30px;
+}
+
+.modulos{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}	
+
+.modulos-col{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-top: 5%;
+	margin-bottom: 30px;
+	margin-right: 2%;
+	margin-left: 2%;
+	position: relative;
+	overflow: hidden;
+}
+.modulos-col img{
+	width: 100%;
+	display: block;
+}
+
+
+.layer{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;;
+
+}
+.layer:hover{
+	background: rgba(17, 5, 88, 0.7);
+}
+
+.layer h3{
+	width: 100%;
+	font-weight: 500;
+	color: #fff;
+	font-size: 20px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+
+}
+
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+
+@media (max-width: 1000px){
+	.row{
+		display: grid;
+		grid-template-columns: 1fr;}
+	.header{
+		width: 90%;
+		padding-top: 20px;}
+	.title h1 {
+		font-size: 80px;}
+	letter2 {
+		font-size: 80px;}	
+}
+
+
+/*---------Tabela-----------*/
+
+
+
+.content-table {
+	border-collapse: collapse;
+	margin: 8% 0;
+	font-size: 0.9em;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	
+  }
+  
+  .content-table thead tr {  
+	background-color: #174e42;
+	color: #ffffff;
+	font-weight: bold;
+  }
+  
+  .content-table th{
+	padding: 20px 16px;  
+	text-align: center;
+
+  }
+  .content-table td {
+	padding: 12px 20px;
+	text-align: center;
+  }
+  
+  .content-table tbody tr {
+	border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+	border-bottom: 2px solid white
+  }
+  
+  .content-table tbody tr.active-row {
+	font-weight: bold;
+	color: #174e42;
+  }
+  
+  /*------------Formulario---------------*/
+  
+  .formulario {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(135deg, #174e42, #33adff);
+	padding: 10px;
+
+  }
+  .container{
+	  max-width: 700px;
+	  width: 100%;
+	  background: #fff;
+	  padding: 25px 30px;
+	  border-radius: 5px;	  
+
+  }
+  .container .titletable{
+	  font-size: 25px;
+	  font-weight: 500;
+	  position: relative;
+  }
+.container .titletable::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: linear-gradient(135deg, #174e42, #33adff);
+}
+
+.container form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
+}
+form  .user-details .input-box{
+	margin-bottom: 15px;
+	width: calc(100% / 2 - 20px);
+}
+.user-details .input-box details{
+	display: block;
+	font-weight: 500;
+	margin-top: 5px;
+
+}
+.user-details .input-box input{
+	height: 45px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid rgb(15, 8, 8);
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: #44b39b;
+}
+
+form .gender-details .gender-title{
+	font-size: 20px;
+	font-weight: 500;
+}
+form .gender-details .category{
+	display: flex;
+	width: 80%;
+	margin: 14px 0;
+	justify-content: space-between;
+}
+.gender-details .category label{
+	display: flex;
+	align-items: center;
+}
+.gender-details .category .dot{
+	height: 18px;
+	width: 18px;
+	background: #d9d9d9;
+	border-radius: 50%;
+	margin-right: 10px;
+	border: 5px solid transparent;
+	transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three,
+#dot-4:checked ~ .category label .four,
+#dot-5:checked ~ .category label .five
+{
+	border-color: #c8d5d8;
+	background: #223d37;
+}
+form input[type="radio"]{
+	display: none;
+}
+
+form  .user-details .input-messagebox{
+	margin-bottom: 40px;
+	width: 10000px;
+}
+.user-details .input-messagebox details{
+	display: none;
+	
+}
+.user-details .input-messagebox input{
+	height: 150px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid rgb(15, 8, 8);
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+.user-details .input-messagebox input:focus,
+.user-details .input-messagebox input:valid{
+	border-color: #44b39b;
+}
+
+/*----------Coffee with a client-------------------*/
+
+.invitation {
+	height: 100vh;
+	text-align: right;
+	background: linear-gradient(135deg, #37e7c1, #16537c);
+	padding: 10px;
+}	
+
+.invitation	h1{
+		color: rgb(209, 209, 65);
+		font-size: 150px;
+		margin-top: 200px;
+		margin-right: 50px;
+	}
+
+
+
+.adress-box{
+	display: flex;
+} 
+
+.flexbox-item{
+	width: 200px;
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+.flexbox-item-1 {
+	margin-left: 50px;
+	
+}	
+
+.flexbox-item-2{
+	margin-top: 100px;
+	margin-left: 500px;
+	margin-bottom: 1000px;
+}
+
+/*---------------About Me------------------------*/
+
+.me {
+	display: flex;
+	height: 159vh;
+	text-align: left;
+	background: linear-gradient(135deg, #080808, #1c2c23);
+	padding: 10px;
+}
+
+.profilephoto{
+	width: 80%;
+	margin-top: 200px;
+	margin-left: 50px;
+}
+
+.textaboutme h2{
+	color: rgb(209, 209, 65);
+	font-size: 45px;
+	margin-top: 200px;
+	margin-right: 50px;
+	margin-left: 150px;
+	}
+
